@@ -2,12 +2,11 @@
  * @jest-environment jsdom
  */
 
-/*
  const buttonClick = require("../button");
 
  beforeAll(() => {
     let fs = require("fs");
-    let fileContents = fs.readFileSync("index.html", "utf-8");
+    let fileContents = fs.readFileSync("index-1.html", "utf-8");
     document.open();
     document.write(fileContents);
     document.close();
@@ -23,4 +22,4 @@
         expect(document.getElementsByTagName("h1").length).toBe(1);
     });
  });
- */
+ 
