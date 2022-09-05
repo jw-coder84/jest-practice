@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 
+/*
  const buttonClick = require("../button");
 
  beforeAll(() => {
@@ -22,3 +23,4 @@
         expect(document.getElementsByTagName("h1").length).toBe(1);
     });
  });
+ */

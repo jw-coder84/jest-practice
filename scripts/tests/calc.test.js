@@ -1,3 +1,5 @@
+/*
+
 const addition = require("../calc");
 
 describe("Calculator", () => {
@@ -19,3 +21,5 @@ describe("Calculator", () => {
 
     });
 });
+
+*/
