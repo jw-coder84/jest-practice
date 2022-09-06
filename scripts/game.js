@@ -34,9 +34,9 @@ function addTurn() {
 }
 
 function lightsOn(circ) {
-    document.getElementById(circ).classList.add(circ + "light");
+    document.getElementById(circ).classList.add("light");
     setTimeout(function () {
-        document.getElementById(circ).classList.remove(circ + "light");
+        document.getElementById(circ).classList.remove("light");
     }, 400);
 }
 
@@ -51,9 +51,22 @@ function showTurns() {
     }, 800);
 }
 
-
 function showScore() {
     document.getElementById("score").innerText = game.score;
 }
 
-module.exports = { game, newGame, showScore, addTurn, lightsOn, showTurns };
+function playerTurn() {
+    let i = game.playerMoves.length - 1;
+    if (game.currentGame[i] === game.playerMoves[i]) {
+        if (game.currentGame.length === game.playerMoves.length) {
+            game.score++;
+            showScore();
+            addTurn();
+        }
+    } else {
+        alert("Wrong move!");
+        newGame();
+    }
+}
+
+module.exports = { game, newGame, showScore, addTurn, lightsOn, showTurns, playerTurn };
